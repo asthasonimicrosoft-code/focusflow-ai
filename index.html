@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusFlow AI | Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>✦ FocusFlow</h2>
+    <p class="muted">YOUR PERSONAL WORKSPACE</p>
+    <nav>
+      <a class="active" href="#dashboard">▦ Dashboard</a>
+      <a href="#tasks">✓ My Tasks</a>
+      <a href="#focus">◷ Focus Timer</a>
+    </nav>
+    <div class="side-bottom">
+      <div class="avatar">S</div>
+      <div><strong>Student</strong><p class="muted">Keep growing ✨</p></div>
+    </div>
+  </aside>
+
+  <main id="dashboard">
+    <header>
+      <div>
+        <p class="muted">YOUR SPACE TO GROW</p>
+        <h1>Make today count<span class="purple">.</span></h1>
+        <p class="muted">Small steps lead to big achievements.</p>
+      </div>
+      <div class="date" id="today"></div>
+    </header>
+
+    <section class="stats">
+      <article class="card">
+        <p class="muted">TOTAL TASKS</p>
+        <h2 id="total">0</h2>
+        <span>Tasks in your planner</span>
+      </article>
+      <article class="card">
+        <p class="muted">COMPLETED</p>
+        <h2 id="completed">0</h2>
+        <span>One step at a time</span>
+      </article>
+      <article class="card">
+        <p class="muted">YOUR PROGRESS</p>
+        <h2 id="percentage">0%</h2>
+        <div class="progress"><div id="progressBar"></div></div>
+      </article>
+    </section>
+
+    <section class="content-grid">
+      <article class="card" id="tasks">
+        <div class="section-head">
+          <div><h2>My Tasks</h2><p class="muted">Turn plans into progress.</p></div>
+        </div>
+        <form id="taskForm">
+          <input id="taskInput" placeholder="What do you want to learn?" required>
+          <select id="priority">
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            <option value="Low">Low</option>
+          </select>
+          <button type="submit">+ Add</button>
+        </form>
+        <div id="taskList"></div>
+        <p id="empty" class="muted">Your journey starts with one task.</p>
+      </article>
+
+      <article class="card focus-card" id="focus">
+        <p class="muted">DEEP WORK SESSION</p>
+        <h2>Focus time</h2>
+        <p class="muted">One task. Zero distractions.</p>
+        <div class="timer" id="timer">25:00</div>
+        <div class="timer-controls">
+          <button id="startBtn">▶ Start</button>
+          <button class="secondary" id="resetBtn">↺ Reset</button>
+        </div>
+        <p class="muted timer-note">Try 25 minutes of focused study.</p>
+      </article>
+    </section>
+
+    <footer>Built for your next big achievement ✦ FocusFlow</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
